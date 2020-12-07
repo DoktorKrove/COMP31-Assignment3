@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @NoArgsConstructor
-@Table(name="User")
+@Table(name="USER")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,4 +31,6 @@ public class User {
     private String userName;
     @Column(name="USER_ROLE")
     private String userRole;
+    @Column(name="USER_ADDRESS")
+    private String userAddress;
 }
