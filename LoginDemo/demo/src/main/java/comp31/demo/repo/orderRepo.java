@@ -9,5 +9,5 @@ import comp31.demo.model.order;
 
 @Repository
 public interface OrderRepo extends CrudRepository<order, Integer> {
-    List<order> findbyOrderStatus(String orderStatus);
+    //List<order> findbyOrderStatus(String orderStatus);
 }
