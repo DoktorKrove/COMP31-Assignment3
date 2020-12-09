@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -35,8 +37,10 @@ public class order {
     private String orderStatus;
     @Column(name="ORDER_DATE")
     private Date orderDate;
-
-   /* @OneToMany(mappedBy = "order")
-    private List<Topping> toppings;*/
+    @ManyToOne
+    @JoinColumn(name = "USER_ID", nullable = false)
+    private User userId;
+    @OneToMany(mappedBy = "toppingId")
+    private List<topping> toppings;
 
 }
