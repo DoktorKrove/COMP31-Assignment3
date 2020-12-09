@@ -32,15 +32,15 @@ public class order {
     @Column(name="PIZZA_SIZE")
     private String pizzaSize;
     @Column(name="ORDER_TOTAL")
-    private String orderTotal;
+    private Float orderTotal;
     @Column(name="ORDER_STATUS")
     private String orderStatus;
     @Column(name="ORDER_DATE")
     private Date orderDate;
+    @Column(name="ORDER_TOPPINGS")
+    private String toppings;
     @ManyToOne
-    @JoinColumn(name = "USER_ID", nullable = false)
+    @JoinColumn(name = "USER_ID")
     private User userId;
-    @OneToMany(mappedBy = "toppingId")
-    private List<topping> toppings;
 
 }

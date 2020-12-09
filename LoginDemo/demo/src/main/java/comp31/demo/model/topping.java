@@ -28,10 +28,5 @@ public class topping {
     @Column(name="TOPPING_NAME")
     private String toppingName;
     @Column(name="TOPPING_PRICE")
-    private String toppingPrice;
-    @ManyToOne
-    @JoinColumn(name = "ORDER_ID", nullable = false)
-    private User orderId;
-
-    
+    private Float toppingPrice;
 }

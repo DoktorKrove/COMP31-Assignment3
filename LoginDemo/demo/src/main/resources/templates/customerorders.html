@@ -11,7 +11,7 @@
     <form>
 
     </form>
-    <table>
+    <table border=1>
         <tr>
             <th>OrderId</th>
             <th>Number of Pizzas</th>
@@ -20,18 +20,17 @@
             <th>Status</th>
             <th>Date</th>
             <th>User</th>
-            <th>Toppings</th>
         </tr>
-        <tr th:each="item : ${orderList}">
-            <td th:text="${item.orderId}"> </td>
-            <td th:text="${item.pizzaNumber}"> </td>
-            <td th:text="${item.pizzaSize}"> </td>
-            <td th:text="${item.orderTotal}"> </td>
-            <td th:text="${item.orderStatus}"> </td>
-            <td th:text="${item.orderDate}"> </td>
-            <td th:text="${item.userId.userName}"></td>
-            <td th:text="${item.toppings}"></td>
-
-        </tr>
+            <tr th:each="item : ${orderList}">
+                <td th:text="${item.orderId}"> </td>
+                <td th:text="${item.pizzaNumber}"> </td>
+                <td th:text="${item.pizzaSize}"> </td>
+                <td th:text="${item.orderTotal}"> </td>
+                <td th:text="${item.orderStatus}"> </td>
+                <td th:text="${item.orderDate}"> </td>
+                <td th:text="${item.userId.userName}"></td>
+                <td th:text="${item.toppings}"></td>
+            </tr>
+    </table>
 </body>
 </html>
