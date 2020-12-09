@@ -24,8 +24,8 @@ public class EmployeeController {
     UserRepo userRepo;
 
     @GetMapping("/employee")
-    public String goToClerkPage(Model model){
-    String nextPage= "login";
+    public String goToEmployeePage(Model model){
+    String nextPage= "employeepage";
     User currentUser = (User) model.getAttribute("currentUser");
 
     List<order> orderList = null;
