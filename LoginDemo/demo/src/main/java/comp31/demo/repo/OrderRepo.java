@@ -10,7 +10,7 @@ import comp31.demo.model.order;
 
 @Repository
 public interface OrderRepo extends CrudRepository<order, Integer> {
-    List<order> findAll();
-    List<order> findByUserId(User user);
+    List<order> findAll(); //Leif Lang
+    List<order> findByUserId(User user); //Leif Lang
     //List<order> findbyOrderStatus(String orderStatus);
 }
