@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>employee page</h1>
+    <tr th:each="order: ${orderList}">
+        <td th:text="${order.orderId}"></td>
+        <td th:text="${order.pizzaNumber}"></td>
+        <td th:text="${order.pizzaSize"></td>
+        <td th:text="${order.orderTotal}"></td>
+        <td th:text="${order.orderStatus}"></td>
+        <td th:text="${order.orderDate}"></td>
+    </tr>
+    <button><a href="/logout">Logout</a></button>
+</body>
+</html>
