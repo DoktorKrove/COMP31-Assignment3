@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import comp31.demo.model.order;
 
 @Repository
-public interface orderRepo extends CrudRepository<order, Integer> {
+public interface OrderRepo extends CrudRepository<order, Integer> {
     List<order> findbyOrderStatus(String orderStatus);
 }

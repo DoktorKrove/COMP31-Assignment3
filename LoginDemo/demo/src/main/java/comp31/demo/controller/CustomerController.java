@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import comp31.demo.model.User;
 import comp31.demo.repo.UserRepo;
-import comp31.demo.service.LoginService;
+import comp31.demo.repo.ToppingRepo;
+import comp31.demo.repo.OrderRepo;
 
 /**
  * LoginController
@@ -19,15 +20,14 @@ import comp31.demo.service.LoginService;
 public class CustomerController 
 {
 
-    @Autowired
-    UserRepo userRepo;
-    @Autowired
-    LoginService loginService;
+    @Autowired UserRepo userRepo;
+    @Autowired ToppingRepo toppingRepo;
+    @Autowired OrderRepo orderRepo;
 
     @GetMapping("/order")
     public String getLogin(User user, Model model) 
     {
-        User currentUser = loginService.validate(user.getUserName());
+        User currentUser = (User)model.getAttribute("currentUser");
         return "customerpage";
     }
 
