@@ -27,13 +27,13 @@ public class CustomerController
     @Autowired ToppingRepo toppingRepo;
     @Autowired OrderRepo orderRepo;
 
-    @GetMapping("/order")
+    @GetMapping("/showOrders")
     public String getLogin(User user, Model model) 
     {
         User currentUser = (User)model.getAttribute("currentUser");
         List<order> orderList = orderRepo.findByUserId(currentUser);
         model.addAttribute("orderList", orderList);
-        return "customerpage";
+        return "customerorders";
     }
 
 }

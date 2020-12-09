@@ -1,0 +1,37 @@
+<!-- Leif Lang -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Page</title>
+</head>
+<body>
+    <h1>Order Page</h1>
+    <h2 th:text="|Welcome ${currentUser.userName}. Please place your order blow|"></h2>
+    <form>
+
+    </form>
+    <table>
+        <tr>
+            <th>OrderId</th>
+            <th>Number of Pizzas</th>
+            <th>Size</th>
+            <th>Price ($)</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>User</th>
+            <th>Toppings</th>
+        </tr>
+        <tr th:each="item : ${orderList}">
+            <td th:text="${item.orderId}"> </td>
+            <td th:text="${item.pizzaNumber}"> </td>
+            <td th:text="${item.pizzaSize}"> </td>
+            <td th:text="${item.orderTotal}"> </td>
+            <td th:text="${item.orderStatus}"> </td>
+            <td th:text="${item.orderDate}"> </td>
+            <td th:text="${item.userId.userName}"></td>
+            <td th:text="${item.toppings}"></td>
+
+        </tr>
+</body>
+</html>
