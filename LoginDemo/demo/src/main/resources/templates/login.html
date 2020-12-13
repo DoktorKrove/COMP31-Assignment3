@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="ass3.css">    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <p th:text="|Current User: ${currentUser.userName}​​|"></p>
-    <form action="/login" method="POST" th:object="${user}">
+    <div class="jumbotron text-center">
+        <h1>PIZZA SHOP</h1>
+      </div>
+    <form action="/login" method="POST" th:object="${newUser}">
 
-        <label for="username"></label>
-            <input type="text" th:field="*{userName}" id="username" >
-            <br>
+        <label for="username">Login</label><br>
+            <input type="text" th:field="*{userName}" id="username" ><a href="/hint">Hint</a>
+            <br><br>
             <input type="submit" value="Login">
     </form>
-    <a href="/authors">Go  Admin page</a>
-    <a href="/addAuthor">Go Clerk page</a>
-    <a href="/addAuthor">Go customerPage page</a>
+    <a href="/managerpage">Go  Manager page</a><br>
+    <a href="/employeepage">Go Employee page</a><br>
+    <a href="/customerpage">Go customer Page </a><br>
 </body>
 </html>

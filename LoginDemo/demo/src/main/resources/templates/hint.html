@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+          width:100%;
+        }
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 15px;
+          text-align: left;
+        }
+        #t01 tr:nth-child(even) {
+          background-color: #eee;
+        }
+        #t01 tr:nth-child(odd) {
+         background-color: #fff;
+        }
+        #t01 th {
+          background-color: black;
+          color: white;
+        }
+        </style>
+</head>
+<body>
+    <h1>First letter should be capital</h1>
+
+<br>
+
+<table id="t01">
+  <tr>
+    <th>Username</th>
+    <th>UserRole</th> 
+  </tr>
+  <tr>
+    <td>Ravneet</td>
+    <td>manager</td>
+  </tr>
+  <tr>
+    <td>Aman</td>
+    <td>employee</td>
+  </tr>
+  <tr>
+    <td>Dan</td>
+    <td>customer</td>
+  </tr>
+  <tr>
+    <td>Sam</td>
+    <td>customer</td>
+  </tr>
+  <tr>
+    <td>James</td>
+    <td>manager</td>
+  </tr>
+  <tr>
+    <td>Leif</td>
+    <td>employee</td>
+  </tr>
+</table>
+
+    <button><a href="/logout">Logout</a></button>
+</body>
+</html>
