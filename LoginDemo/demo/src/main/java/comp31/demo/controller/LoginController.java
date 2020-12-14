@@ -81,5 +81,17 @@ public class LoginController {
     {
         return"employeePage";
     }
+    @GetMapping("/insertnew")
+    public String insertnew()
+    {
+        return"insertnew";
+
+    }
+    @GetMapping("/addnew")
+    public String addUser(User user)
+    {
+        userRepo.save(user);
+        return"/insertnew";
+    } 
 
 }

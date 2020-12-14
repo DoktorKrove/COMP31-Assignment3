@@ -39,4 +39,9 @@ public class User {
     private String userAddress;
     @OneToMany(mappedBy = "userId")
     private List<order> orders;
+
+    // @Override
+    // public String toString(){
+    //     return "User [username = " + userName + ", userrole"+ userRole + "useraddress"+ userAddress + "]";
+    // }
 }
