@@ -6,11 +6,8 @@
 </head>
 <body>
     <h1>Order Page</h1>
-    <h2 th:text="|Welcome ${currentUser.userName}. Please place your order blow|"></h2>
-    <form>
-
-    </form>
-    <table border=1>
+    <h2 th:text="|Welcome ${currentUser.userName}. Your orders are Blow|"></h2>
+    <table border=1 style="float: left;width:49%;">
         <tr>
             <th>OrderId</th>
             <th>Number of Pizzas</th>
@@ -20,17 +17,27 @@
             <th>Date</th>
             <th>User</th>
         </tr>
-            <tr th:each="item : ${orderList}">
-                <td th:text="${item.orderId}"> </td>
-                <td th:text="${item.pizzaNumber}"> </td>
-                <td th:text="${item.pizzaSize}"> </td>
-                <td th:text="${item.orderTotal}"> </td>
-                <td th:text="${item.orderStatus}"> </td>
-                <td th:text="${item.orderDate}"> </td>
-                <td th:text="${item.userId.userName}"></td>
-                <td th:text="${item.toppings}"></td>
-            </tr>
+        <tr th:each="item : ${orderList}">
+            <td th:text="${item.orderId}"> </td>
+            <td th:text="${item.pizzaNumber}"> </td>
+            <td th:text="${item.pizzaSize}"> </td>
+            <td th:text="${item.orderTotal}"> </td>
+            <td th:text="${item.orderStatus}"> </td>
+            <td th:text="${item.orderDate}"> </td>
+            <td th:text="${item.userId.userName}"></td>
+        </tr>
     </table>
+    <table border=1 style="display: inline-block;max-width: 49%;border-left: 0px;">
+        <tr>
+            <th>OrderId</th>
+        </tr>
+        <tr th:each="top : ${toppings}">
+            <td th:text="${top}"></td>
+        </tr>
+    </table>
+    <br>
+    <button><a href="/customerPage">Home</a></button>
+    <button><a href="/createOrder">Create Order</a></button>
     <button><a href="/logout">Logout</a></button>
 </body>
 </html>

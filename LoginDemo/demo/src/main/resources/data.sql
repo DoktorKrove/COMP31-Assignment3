@@ -23,9 +23,12 @@ INSERT INTO ORDERS
 INSERT INTO TOPPING  
 (TOPPING_NAME, TOPPING_PRICE)
 VALUES
-
-     ('ONION', 1.90),
-     ('MUSHROOM', 1.90),
-     ('GREEN PEPPER', 1.90),
-     ('PINEAPPLE', 1.90)
+    ('TOMATO SAUCE', 2.50),
+    ('CHEESE', 2.89),
+    ('PEPPERONI', 3.50),
+    ('HAM', 3.0),
+    ('ONION', 1.90),
+    ('MUSHROOM', 1.90),
+    ('GREEN PEPPER', 1.90),
+    ('PINEAPPLE', 1.90)
 ;

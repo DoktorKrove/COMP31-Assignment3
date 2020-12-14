@@ -1,0 +1,31 @@
+<!-- Leif Lang -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Page</title>
+</head>
+<body>
+    <h1>customer Page</h1>
+    <h2 th:text="|Welcome ${currentUser.userName}. Please place your order blow|"></h2>
+    <form action="orderData" method="POST" th:object="${newOrder}">
+        <label>Number of Pizzas</label>
+        <input type="number" max="10" min="1" name="" th:field="*{pizzaNumber}"><br>
+        <label>Pizza size</label>
+        <select name="" th:field="*{pizzaSize}">
+            <option value="SMALL">SMALL</option>
+            <option value="MEDIUM">MEDIUM</option>
+            <option selected value="LARGE">LARGE</option>
+            <option value="X-LARGE">X-LARGE</option>
+        </select><br>
+        <label>Toppings</label><br>
+        <table>
+            <tr th:each="item : ${toppingsList}">
+                <td><label th:text="${item.toppingName}"></label><input type="checkbox" name="topping" th:value="${item.toppingId}"></td>
+            </tr>
+        </table>
+        <button>Order</button>
+        <button><a href="/customerPage">Home</a></button>
+    </form>
+</body>
+</html>
