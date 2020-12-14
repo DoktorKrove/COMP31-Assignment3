@@ -1,3 +1,5 @@
+/* Written By Aman Prajapati*/
+
 INSERT INTO USER  
 (USER_NAME,USER_ROLE,USER_ADDRESS)
 VALUES
