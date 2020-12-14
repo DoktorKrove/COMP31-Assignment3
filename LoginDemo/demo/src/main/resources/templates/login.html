@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel="stylesheet" href="ass3.css">    
+    <link rel="stylesheet" href="ass3.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <div class="jumbotron text-center">
-        <h1>PIZZA SHOP</h1>
-      </div>
-    <form action="/login" method="POST" th:object="${newUser}">
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>DICE ONLINE PIZZA</h1>
+            <form action="/login" method="POST" th:object="${newUser}">
 
-        <label for="username">Login</label><br>
-            <input type="text" th:field="*{userName}" id="username" ><a href="/hint">Hint</a>
-            <br><br>
-            <input type="submit" value="Login">
-    </form>
-    <a href="/managerpage">Go  Manager page</a><br>
-    <a href="/employeepage">Go Employee page</a><br>
-    <a href="/customerpage">Go customer Page </a><br>
-</body>
+                <label for="username">Login</label>
+                    <input type="text" th:field="*{userName}" id="username" ><a href="/hint">Hint</a>
+                    <br><br>   
+                    <input type="submit" value="Login"><br><br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a href="/managerpage">Go  Manager page</a><br>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="/employeepage">Go Employee page</a><br>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="/customerpage">Go customer Page </a><br>
+                            </div>
+                        </div>
+                    </div>
+            </form>        
+        </div>    
+    </div>  
+ </body>
 </html>
