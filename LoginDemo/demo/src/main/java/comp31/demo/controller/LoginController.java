@@ -46,6 +46,7 @@ public class LoginController {
     }
     else 
     {
+       // nextPage="customercreateorder";
         user.setUserName("");
         model.addAttribute("newUser", user);
     }

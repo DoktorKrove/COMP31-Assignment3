@@ -1,3 +1,8 @@
-body {background-color: powderblue;}
-h1   {color: blue;}
-a    {color: red;}
+body {background-color: powderblue;
+    background-image: url('pizza.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;}
+h1   {color: rgb(255, 166, 0);}
+a    {color: rgb(238, 255, 0);}
+label{color: rgb(238, 255, 0);}
