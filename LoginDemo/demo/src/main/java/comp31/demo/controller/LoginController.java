@@ -1,3 +1,4 @@
+// Edited by Ravneet Singh
 package comp31.demo.controller;
 
 
@@ -46,9 +47,9 @@ public class LoginController {
     }
     else 
     {
-       // nextPage="customercreateorder";
         user.setUserName("");
         model.addAttribute("newUser", user);
+        
     }
     return nextPage;
 }
@@ -61,6 +62,8 @@ public class LoginController {
         model.addAttribute("newUser", user);
         return "login";
     }
+
+    // Written below by Ravneet Singh
     @GetMapping("/hint")
     public String getHint()
     {

@@ -1,8 +1,12 @@
+/* Written by Ravneet Singh */
 body {background-color: powderblue;
          background-image: url('pizza.jpg');
       background-repeat: no-repeat;
         background-attachment: fixed; 
     background-size: 100% 100%;}
 h1   {color: rgb(255, 166, 0);}
-a    {color: rgb(238, 255, 0);}
+h2  {color: rgb(255, 166, 0);}
+a    {color: rgb(255, 0, 0);}
 label{color: rgb(255, 81, 0);}
+table {color: rgb(0, 140, 255);
+       background-color: brown; }
