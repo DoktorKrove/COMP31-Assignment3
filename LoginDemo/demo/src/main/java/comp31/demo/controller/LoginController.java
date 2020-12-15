@@ -94,7 +94,7 @@ public class LoginController {
     public String addUser(User user)
     {
         userRepo.save(user);
-        return"/insertnew";
+        return"insertnew";
     } 
 
 }

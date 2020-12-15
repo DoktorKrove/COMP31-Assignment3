@@ -1,23 +1,59 @@
 <!-- Written and modified by Ravneet Singh -->
+<!--  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="ass3.css"> 
+    <link rel="stylesheet" href="ass3(i).css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-        <form action ="addnew">
+        <!-- <form action ="addnew">
             <label>Enter Name</label>
-            <input type = "text" name="userName"><br>
-            <!-- <label>Enter the page you want to go</label>
-            <input type = "text" name="userRole"><br> -->
-            <label>Enter Address</label>
+            <input type = "text" name="userName"><br> -->
+                        <!-- <label>Enter the page you want to go</label>
+                        <input type = "text" name="userRole"><br> -->
+            <!-- <label>Enter Address</label>
             <input type = "text" name="userAddress"><br>
-            <input type ="submit"><br>
+            <button><input type ="submit"><br></button>
                 <button><a href="/logout">Logout</a></button>
-                
-        </form>
+            </form> -->
+           
+<div class="bg-text">       
+<div class="container">
+    <div class="jumbotron text-center">
+        <div class="form-group">        
+            <div class="col-sm-offset-11">
+               <button type="button" class="btn btn-danger"><a href="/logout">Logout</a></button>
+        </div>
+       </div>
+        <h1><b>SIGN UP PAGE</b></h1>
+    
+    <form class="form-horizontal" action="addnew">
+      <div class="form-group">
+        <label class="control-label col-sm-2" >NAME:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Enter name" name="userName"><br>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >ADDRESS:</label>
+        <div class="col-sm-10">          
+          <input type="text" class="form-control"  placeholder="Enter address" name="userAddress"><br>
+        </div>
+      </div>
+      <div class="form-group">        
+        <div class="col-sm-offset-1 col-sm-11">
+           <button type="submit" class="btn btn-success">Sign Up</button>
+        </div>
+      </div><br>
+      <br>
+      
+    </div> 
+    </form>
+  </div>
+</div>
 </body>
 </html>
