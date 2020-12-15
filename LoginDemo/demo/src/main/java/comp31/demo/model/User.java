@@ -34,7 +34,7 @@ public class User {
     @Column(name="USER_NAME")
     private String userName;
     @Column(name="USER_ROLE")
-    private String userRole;
+    private String userRole ="customer";
     @Column(name="USER_ADDRESS")
     private String userAddress;
     @OneToMany(mappedBy = "userId")
