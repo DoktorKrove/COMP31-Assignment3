@@ -93,7 +93,7 @@ public class LoginController {
     @GetMapping("/addnew")
     public String addUser(User user)
     {
-        userRepo.save(user);
+        userRepo.save(user);//This save the data
         return"insertnew";
     } 
     @GetMapping("/hint1")

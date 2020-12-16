@@ -1,4 +1,4 @@
-/* Written By Aman Prajapati*/ 
+/* Written By Aman Prajapati */ 
 
 package comp31.demo.model;
 
@@ -34,13 +34,13 @@ public class User {
     @Column(name="USER_NAME")
     private String userName;
     @Column(name="USER_ROLE")
-    private String userRole ="customer";// Put the value of userRole as customer so every  time the  user enter their data 
-    @Column(name="USER_ADDRESS")// for the signup they do not have to select the page to go. It is always customer.
+    private String userRole ="customer";//Ravneet= Put the value of userRole as customer so every  time the  user enter their data 
+    @Column(name="USER_ADDRESS")// Ravneet=for the signup they do not have to select the page to go. It is always customer.
     private String userAddress;
     @OneToMany(mappedBy = "userId")
     private List<order> orders;
 
-    // @Override
+    // @Override //ravneet
     // public String toString(){
     //     return "User [username = " + userName + ", userrole"+ userRole + "useraddress"+ userAddress + "]";
     // }
