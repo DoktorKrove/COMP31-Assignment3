@@ -96,5 +96,15 @@ public class LoginController {
         userRepo.save(user);
         return"insertnew";
     } 
+    @GetMapping("/hint1")
+    public String hint1()
+    {
+        return "hint1";
+    }
+    @GetMapping("/signUp")
+    public String sign()
+    {
+        return "insertnew";
+    }
 
 }
